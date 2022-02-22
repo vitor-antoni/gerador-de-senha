@@ -4,3 +4,6 @@ Este projeto tem o cunho de ajudar, de uma forma alternativa, na criação de se
 Em breve atualizerei para que estas senhas sejam gravadas e identificadas a qual conta/login estão ligadas.
 
 Data de início: 22/02/2022
+<div align="top_right">
+<img src="" width=""/>
+</div>
