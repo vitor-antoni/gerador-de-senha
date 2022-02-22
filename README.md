@@ -5,5 +5,5 @@ Em breve atualizerei para que estas senhas sejam gravadas e identificadas a qual
 
 Data de início: 22/02/2022
 <div align="top_right">
-<img src="" width=""/>
+<img src="https://user-images.githubusercontent.com/92998253/155228858-85dc1b56-9bfc-46e8-bc75-6c003aad1194.png" width=""/>
 </div>
