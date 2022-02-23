@@ -4,10 +4,10 @@ Este projeto tem o cunho de ajudar, de uma forma alternativa, na criação de se
 Em breve atualizerei para que estas senhas sejam gravadas e identificadas a qual conta/login estão ligadas.
 
 Data de início: 22/02/2022
-<div align="top">
-<img src="https://user-images.githubusercontent.com/92998253/155228858-85dc1b56-9bfc-46e8-bc75-6c003aad1194.png" width="300px"/>
+<div align="">
+<img src="https://user-images.githubusercontent.com/92998253/155228858-85dc1b56-9bfc-46e8-bc75-6c003aad1194.png" width="200px"/>
 </div>
 
-<div align="bottom">
-<img src="https://user-images.githubusercontent.com/92998253/155321106-9192a8f7-ebbf-4f31-8d88-08fd2160cbd9.png" width="1000px"/>
+<div align="">
+<img src="https://user-images.githubusercontent.com/92998253/155321106-9192a8f7-ebbf-4f31-8d88-08fd2160cbd9.png" width="950px"/>
 </div>
