@@ -5,9 +5,9 @@ Em breve atualizerei para que estas senhas sejam gravadas e identificadas a qual
 
 Data de início: 22/02/2022
 <div align="bottom_left">
-<img src="https://user-images.githubusercontent.com/92998253/155228858-85dc1b56-9bfc-46e8-bc75-6c003aad1194.png" width="30px"/>
+<img src="https://user-images.githubusercontent.com/92998253/155228858-85dc1b56-9bfc-46e8-bc75-6c003aad1194.png" width="150px"/>
 </div>
 
 <div align="bottom_right">
-<img src="https://user-images.githubusercontent.com/92998253/155321106-9192a8f7-ebbf-4f31-8d88-08fd2160cbd9.png" width="300px"/>
+<img src="https://user-images.githubusercontent.com/92998253/155321106-9192a8f7-ebbf-4f31-8d88-08fd2160cbd9.png" width="900px"/>
 </div>
