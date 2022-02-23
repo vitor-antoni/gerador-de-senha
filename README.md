@@ -9,5 +9,5 @@ Data de início: 22/02/2022
 </div>
 
 <div align="bottom_right">
-<img src="https://user-images.githubusercontent.com/92998253/155321106-9192a8f7-ebbf-4f31-8d88-08fd2160cbd9.png"/>
+<img src="https://user-images.githubusercontent.com/92998253/155321106-9192a8f7-ebbf-4f31-8d88-08fd2160cbd9.png" widht="30px"/>
 </div>
