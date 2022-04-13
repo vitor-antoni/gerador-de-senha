@@ -7,13 +7,13 @@ Data de início: 22/02/2022
 
 Edit 13/04/2022: Realizei a atualização do código, melhorando-o e adicionando funções e módulos, conforme meus conhecimentos adquiridos recentemente.
 
-1° Imagem: Versão 2.0
+Versão 2.0
 <div align="">
 <img src="https://user-images.githubusercontent.com/92998253/163285787-1f33548f-2816-4def-aa82-7b734389ab5d.png" width="250px"/>
 </div>
 
 
-2° Imagem: Versão 1.0
+Versão 1.0
 <div align="">
 <img src="https://user-images.githubusercontent.com/92998253/155228858-85dc1b56-9bfc-46e8-bc75-6c003aad1194.png" width="250px"/>
 </div>
