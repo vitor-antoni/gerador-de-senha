@@ -1,5 +1,5 @@
 # Gerador de senha com 8 caracteres
-Este projeto tem o cunho de ajudar, de uma forma alternativa, na criação de senhas seguras, por gerar códigos com 8 dígitos, incluindo letras maiúsculas e minúsculas, além de símbolos e números.
+Este projeto tem o cunho de ajudar, de uma forma alternativa, na criação de senhas seguras, por gerar códigos com 8 dígitos ou mais, deixando a escolha do usuário se quiser incluir letras maiúsculas e minúsculas, além de símbolos e números.
 
 Em breve atualizerei para que estas senhas sejam gravadas e identificadas a qual conta/login estão ligadas. Além disto, será providenciada uma interface para que o usuário possoa intregir com a mesma. Aguarde!
 
