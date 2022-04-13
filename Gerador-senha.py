@@ -10,7 +10,7 @@ simbolos = '~`! @#$%^&*()_-+={]|\:;<,>.?/'
 digitos = ""
 
 ## Definição de tamanho
-tamanho = int(input(f"Digite o tamanho da senha {Colors.corVermelho()}(mín: 8){Colors.limpar()}: "))
+tamanho = int(input(f"Digite o tamanho da senha {Colors.corVermelho()}(min: 8){Colors.limpar()}: "))
 conferenciaTamanho = Functions.conferirTamanho(tamanho)
 
 ## Inclusão de letras na senha

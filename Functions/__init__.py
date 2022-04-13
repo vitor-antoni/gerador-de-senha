@@ -3,7 +3,7 @@ def conferirTamanho(tam):
         import Colors
         while tam < 8:
             print(f"Senha {Colors.corVermelho()}fraca{Colors.limpar()} demais!")
-            tam = int(input(f"Digite o tamanho da senha {Colors.corVermelho()}(mín: 8){Colors.limpar()}: "))
+            tam = int(input(f"Digite o tamanho da senha {Colors.corVermelho()}(min: 8){Colors.limpar()}: "))
     
     except Exception as error:
         print(f"Houve um erro em conferir o tamanho: {error.__class__}")
