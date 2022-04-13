@@ -5,7 +5,7 @@ Em breve atualizerei para que estas senhas sejam gravadas e identificadas a qual
 
 Data de início: 22/02/2022
 
-Edit 13/04/2022: Realizei a atualização do código, melhorando-o e adicionando funções e módulos, conforme meus conhecimentos adquiridos recentemente.
+Edit: Realizei a atualização do código, melhorando-o e adicionando funções e módulos, conforme meus conhecimentos adquiridos recentemente.  Data: 13/04/2022
 
 Versão 2.0
 <div align="">
