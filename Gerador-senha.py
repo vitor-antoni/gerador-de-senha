@@ -42,4 +42,7 @@ digitos = random.sample(digitos, conferenciaTamanho)   # Gera uma *lista* embara
 
 print("\nSua senha gerada é: ", end="")
 for c in digitos:
-    print(c, end="")
+    print(f"{Colors.corVerde()}{c}", end="")
+
+## Limpar Cores
+print(f"{Colors.limpar()}")

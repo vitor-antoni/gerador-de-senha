@@ -1,6 +1,3 @@
-from calendar import c
-
-
 def corVermelho():
     cor = {"vermelho":"\033[1;31m"}
     return f"{cor['vermelho']}"
