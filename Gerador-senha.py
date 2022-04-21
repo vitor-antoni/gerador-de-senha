@@ -5,7 +5,7 @@ import Colors
 letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 letrasM = 'abcdefghijklmnopqrstuvwxyz'
 num = '1234567890'
-simbolos = '~`! @#$%^&*()_-+={]|\:;<,>.?/'
+simbolos = '~`!@#$%^&*()_-+={]|\:;<,>.?/'
 
 digitos = ""
 
