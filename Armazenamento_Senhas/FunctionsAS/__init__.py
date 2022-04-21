@@ -1,4 +1,4 @@
-from Gerador_Senha import Colors
+import Colors
 
 def ArquivoExiste(nome_arquivo):
     try:
@@ -13,6 +13,7 @@ def CriaArquivo(nome_arquivo):
     try: 
         arquivo = open(nome_arquivo + ".txt", "wt+")
     except Exception as error:
-        print(f"Houve um erro para criar o arquivo: {Colors.corVermelho}{error}{Colors.limpar()}")
+        print(f"Houve um erro para criar o arquivo: {Colors.corVermelho()}{error}{Colors.limpar()}")
     else:
-        print("{Colors.corVerde()}Sucesso na criação do arquivo!{Colors.limpar()}")
+        print(f"{Colors.corVermelho()}Sucesso na criação do arquivo!{Colors.limpar()}")
+        arquivo.close()
