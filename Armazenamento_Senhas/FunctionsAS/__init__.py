@@ -28,16 +28,6 @@ def SalvaDado(nome_arquivo, tipo_dado, dado):
         arquivo.write(tipo_dado + dado)
         arquivo.close()
 
-    
-def EditaDado(nome_arquivo, tipo_dado, dado):
-    try:
-        arquivo = open(nome_arquivo + ".txt", "at+")
-    except Exception as error:
-        print(f"Houve um erro para salvar o dado: {Colors.corVermelho()}{error}{Colors.limpar()}")
-    else:
-        arquivo.write(tipo_dado + dado)
-        arquivo.close()
-
 
 def DeletaDado(nome_arquivo):
     try:

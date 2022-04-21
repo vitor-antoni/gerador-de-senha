@@ -16,10 +16,10 @@ else:
     if edit in "S":
         FunctionsAS.DeletaDado(Nome_Arquivo)    
         login = str(input("Digite aqui o seu novo login: "))
-        FunctionsAS.EditaDado(Nome_Arquivo, "Login: ", login)
+        FunctionsAS.SalvaDado(Nome_Arquivo, "Login: ", login)
 
         senha = str(input("Digite aqui sua nova senha: "))
-        FunctionsAS.EditaDado(Nome_Arquivo, "\nSenha: ", senha)
+        FunctionsAS.SalvaDado(Nome_Arquivo, "\nSenha: ", senha)
 
 
 
