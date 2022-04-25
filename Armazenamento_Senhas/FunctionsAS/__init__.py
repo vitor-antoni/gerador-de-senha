@@ -1,5 +1,12 @@
 import Colors
 
+def TabularTitulo(titulo):
+    print(Colors.corVioleta())
+    print("~" * 40)
+    print(titulo.center(40))
+    print("~" * 40)
+    print(Colors.limpar())
+
 def ArquivoExiste(nome_arquivo):
     try:
         arquivo = open(nome_arquivo + ".txt", "rt")
@@ -31,7 +38,7 @@ def SalvaDado(nome_arquivo, tipo_dado, dado):
 
 def DeletaDado(nome_arquivo):
     try:
-        arquivo = open(nome_arquivo + ".txt", "w+")
+        arquivo = open(nome_arquivo + ".txt", "w")
     except Exception as error:
         print(f"Erro: {error}")
     else:
@@ -79,6 +86,7 @@ def verificacaoSN(pergunta=""):
         print(f"Erro para verificar: {error}")
     else:
         return verf
+
 
 def GerarSenha(nome_arquivo):
     import random
