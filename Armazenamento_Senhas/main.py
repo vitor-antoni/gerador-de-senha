@@ -115,4 +115,8 @@ while True:
         titulo = "Deletar senha armazenada"
         FunctionsAS.TabularTitulo(titulo)
 
-        
+        Nome_Arquivo = str(input("Esta senha é referente a que? ")).upper().strip()
+
+        while not FunctionsAS.ArquivoExiste(Nome_Arquivo):
+            print(f"O arquivo referente a '{Colors.corAmarelo()}{Nome_Arquivo}{Colors.limpar()}' não existe...")
+            Nome_Arquivo = str(input("Esta senha é referente a que? ")).upper().strip()
