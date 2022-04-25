@@ -7,21 +7,27 @@ Nome_Arquivo = str(input("Esta senha é referente a que? ")).upper().strip()
 if not(FunctionsAS.ArquivoExiste(Nome_Arquivo)):
     FunctionsAS.CriaArquivo(Nome_Arquivo)
 
+    login = str(input("Digite aqui o seu login: "))
+    FunctionsAS.SalvaDado(Nome_Arquivo, "Login: ", login)
+
+    senha = str(input("Digite aqui sua senha: "))
+    FunctionsAS.SalvaDado(Nome_Arquivo, "\nSenha: ", senha)
+
+    print(f"{Colors.corVerde()}Seu login e senha foram armazenados com sucesso! {Colors.limpar()}")
+
 else:
-    edit = str(input(f"Deseja editar seu login e senha [{Colors.corVerde()}S{Colors.limpar()}/{Colors.corVermelho()}N{Colors.limpar()}]? ")).upper().strip()[0]
-    while edit not in "SN":
-        edit = str(input(f"Deseja editar seu login e senha [{Colors.corVerde()}S{Colors.limpar()}/{Colors.corVermelho()}N{Colors.limpar()}]? ")).upper().strip()[0]
+    edit = FunctionsAS.verificacaoSN(f"\nDeseja editar seu login e senha [{Colors.corVerde()}S{Colors.limpar()}/{Colors.corVermelho()}N{Colors.limpar()}]? ")
 
     if edit in "S":
+        # Deleta os dados armazenados
         FunctionsAS.DeletaDado(Nome_Arquivo)    
-        login = str(input("Digite aqui o seu novo login: "))
+
+        login = str(input("\nDigite aqui o seu novo login: "))
         FunctionsAS.SalvaDado(Nome_Arquivo, "Login: ", login)
 
         # Geração de senha
-        quest_gerar = FunctionsAS.verificacaoSN(f"Deseja gerar uma senha[{Colors.corVerde()}S{Colors.limpar()}/{Colors.corVermelho()}N{Colors.limpar()}]? ")
-        while quest_gerar not in "SN":
-            quest_gerar = FunctionsAS.verificacaoSN(f"Desafio gerar uma senha[{Colors.corVerde()}S{Colors.limpar()}/{Colors.corVermelho()}N{Colors.limpar()}]? ")
-        
+        quest_gerar = FunctionsAS.verificacaoSN(f"\nDeseja gerar uma senha[{Colors.corVerde()}S{Colors.limpar()}/{Colors.corVermelho()}N{Colors.limpar()}]? ")
+
         if quest_gerar in "S":
             import random
 
@@ -70,16 +76,12 @@ else:
                 print(f"{Colors.corVerde()}{c}{Colors.limpar()}", end="") 
                 senha += c
 
+            print(f"{Colors.corVerde()}\n\nSeu login e senha foram alterados e armazenados com sucesso! {Colors.limpar()}")
+
             FunctionsAS.SalvaDado(Nome_Arquivo, "\nSenha: ", senha)
 
         else:
-            senha = str(input("\nDigite aqui sua nova senha: "))
+            senha = str(input("Digite aqui sua nova senha: "))
             FunctionsAS.SalvaDado(Nome_Arquivo, "\nSenha: ", senha)
 
-
-
-login = str(input("\nDigite aqui o seu login: "))
-FunctionsAS.SalvaDado(Nome_Arquivo, "Login: ", login)
-
-senha = str(input("\nDigite aqui sua senha: "))
-FunctionsAS.SalvaDado(Nome_Arquivo, "\nSenha: ", senha)
+            print(f"{Colors.corVerde()}Seu login e senha foram alterados e armazenados com sucesso! {Colors.limpar()}")
