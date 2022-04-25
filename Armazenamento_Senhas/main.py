@@ -63,7 +63,7 @@ while True:
         FunctionsAS.TabularTitulo(titulo)
 
         while True:
-            Nome_Arquivo = str(input("\nEsta senha é referente a que? ")).upper().strip()
+            Nome_Arquivo = str(input("Esta senha é referente a que? ")).upper().strip()
 
             if not FunctionsAS.ArquivoExiste(Nome_Arquivo):
                 print(f"O arquivo referente a '{Colors.corAmarelo()}{Nome_Arquivo}{Colors.limpar()}' não existe...")
@@ -115,8 +115,69 @@ while True:
         titulo = "Deletar senha armazenada"
         FunctionsAS.TabularTitulo(titulo)
 
-        Nome_Arquivo = str(input("Esta senha é referente a que? ")).upper().strip()
-
-        while not FunctionsAS.ArquivoExiste(Nome_Arquivo):
-            print(f"O arquivo referente a '{Colors.corAmarelo()}{Nome_Arquivo}{Colors.limpar()}' não existe...")
+        while True:
             Nome_Arquivo = str(input("Esta senha é referente a que? ")).upper().strip()
+            ArquivoExistenteDel = 0
+
+            if not FunctionsAS.ArquivoExiste(Nome_Arquivo):
+                print(f"O arquivo referente a '{Colors.corAmarelo()}{Nome_Arquivo}{Colors.limpar()}' não existe...")
+                
+                ArquivoExistenteDel = int(input("""\n[ 1 ] Digitar novamente
+[ 2 ] Sair
+                \nDigite a ação desejada: """))
+
+                while ArquivoExistenteDel < 1 or ArquivoExistenteDel > 2:
+                    ArquivoExistenteDel = int(input("""[ 1 ] Digitar novamente
+[ 2 ] Sair
+                \nDigite a ação desejada: """))
+
+                if ArquivoExistenteDel == 1:
+                    continue
+                
+                else:
+                    break
+                    
+            else:       # if FunctionsAS.ArquivoExiste == True
+                break
+
+
+        if ArquivoExistenteDel == 2:
+            break
+
+        VerificacaoDeletar = FunctionsAS.verificacaoSN(f"Tem certeza que deseja {Colors.corVermelho()}excluir{Colors.limpar()}[{Colors.corVerde()}S{Colors.limpar()}/{Colors.corVermelho()}N{Colors.limpar()}]? ")
+
+        if VerificacaoDeletar in "S":
+            import os
+            os.remove(Nome_Arquivo + ".txt")
+
+            print(f"Arquivo '{Colors.corAmarelo()}{Nome_Arquivo}{Colors.limpar()}' {Colors.corVermelho()}exclúido{Colors.limpar()} com sucesso!")
+            break
+        
+        else:
+            break
+
+
+    elif acao == 4:
+        titulo = "Visualizar Senha"
+        FunctionsAS.TabularTitulo(titulo)
+
+        Nome_Arquivo = str(input("Esta senha é referente a que? ")).upper().strip() 
+
+        FunctionsAS.LerArquivo(Nome_Arquivo)
+
+
+    elif acao == 5:
+        break
+    
+    print(f"""O que você deseja realizar? 
+[ 1 ] Armazenar senha
+[ 2 ] Editar senha armazenada
+[ 3 ] Deletar senha armazenada
+[ 4 ] Visualizar senha armazenada
+[ 5 ] Para {Colors.corVermelho()}fechar{Colors.limpar()} o programa""")
+
+    acao = int(input(f"\nDigite a ação desejada[{Colors.corVerde()}1-5{Colors.limpar()}]: "))
+    while acao > 5 or acao < 1:
+        acao = int(input(f"Digite a ação desejada[{Colors.corVerde()}1-5{Colors.limpar()}]: ")) 
+
+print(f"\nO programa acabou e todas as tarefas foram executadas corretamente.{Colors.corVioleta()}Vejo você em breve! :D{Colors.limpar()}")

@@ -16,6 +16,17 @@ def ArquivoExiste(nome_arquivo):
         return True
 
 
+def LerArquivo(nome_arquivo):
+    try:
+        arquivo = open(nome_arquivo + ".txt", "r")
+    except Exception as error:
+        print(f"Erro ao ler o arquivo: {Colors.corVermelho()}{error}{Colors.limpar()}")
+    else:
+        print("")
+        for ler in arquivo.readlines():
+            print(f"{ler}")
+
+
 def CriaArquivo(nome_arquivo):
     try: 
         arquivo = open(nome_arquivo + ".txt", "wt+")
