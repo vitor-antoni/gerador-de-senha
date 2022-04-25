@@ -165,6 +165,7 @@ while True:
 
         FunctionsAS.LerArquivo(Nome_Arquivo)
 
+        break
 
     elif acao == 5:
         break
