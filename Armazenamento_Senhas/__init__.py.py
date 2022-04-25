@@ -1,25 +1,44 @@
 import FunctionsAS
 import Colors
 
+print(f"""O que você deseja realizar? 
+[ 1 ] Armazenar senha
+[ 2 ] Editar senha armazenada
+[ 3 ] Deletar senha armazenada
+[ 4 ] Visualizar senha armazenada
+[ 5 ] Para {Colors.corVermelho()}fechar{Colors.limpar()} o programa""")
 
-Nome_Arquivo = str(input("Esta senha é referente a que? ")).upper().strip()
+acao = int(input(f"\nDigite a ação desejada[{Colors.corVerde()}1-5{Colors.limpar()}]: "))
+while acao > 5 or acao < 1:
+   acao = int(input(f"Digite a ação desejada[{Colors.corVerde()}1-5{Colors.limpar()}]: ")) 
 
-if not(FunctionsAS.ArquivoExiste(Nome_Arquivo)):
-    FunctionsAS.CriaArquivo(Nome_Arquivo)
+if acao == 1:
+    Nome_Arquivo = str(input("\nEsta senha é referente a que? ")).upper().strip()
 
-    login = str(input("Digite aqui o seu login: "))
-    FunctionsAS.SalvaDado(Nome_Arquivo, "Login: ", login)
+    if not(FunctionsAS.ArquivoExiste(Nome_Arquivo)):
+        FunctionsAS.CriaArquivo(Nome_Arquivo)
 
-    senha = str(input("Digite aqui sua senha: "))
-    FunctionsAS.SalvaDado(Nome_Arquivo, "\nSenha: ", senha)
+        login = str(input("Digite aqui o seu login: "))
+        FunctionsAS.SalvaDado(Nome_Arquivo, "Login: ", login)
 
-    print(f"{Colors.corVerde()}Seu login e senha foram armazenados com sucesso! {Colors.limpar()}")
+        # Geração de senha
+        quest_gerar = FunctionsAS.verificacaoSN(f"\nDeseja gerar uma senha[{Colors.corVerde()}S{Colors.limpar()}/{Colors.corVermelho()}N{Colors.limpar()}]? ")
 
-else:
-    edit = FunctionsAS.verificacaoSN(f"\nDeseja editar seu login e senha [{Colors.corVerde()}S{Colors.limpar()}/{Colors.corVermelho()}N{Colors.limpar()}]? ")
+        if quest_gerar in "S":
+            FunctionsAS.gerarSenha(Nome_Arquivo)
 
-    if edit in "S":
-        # Deleta os dados armazenados
+        else:
+            senha = str(input("Digite aqui sua senha: "))
+            FunctionsAS.SalvaDado(Nome_Arquivo, "\nSenha: ", senha)
+
+        print(f"{Colors.corVerde()}Seu login e senha foram armazenados com sucesso! {Colors.limpar()}")
+
+if acao == 2:
+    Nome_Arquivo = str(input("\nEsta senha é referente a que? ")).upper().strip()
+
+    while not FunctionsAS.ArquivoExiste:
+        print(f"O arquivo referente a '{Nome_Arquivo}' não existe...")
+        # Apagar as informações do arquivo antigo
         FunctionsAS.DeletaDado(Nome_Arquivo)    
 
         login = str(input("\nDigite aqui o seu novo login: "))
@@ -29,59 +48,11 @@ else:
         quest_gerar = FunctionsAS.verificacaoSN(f"\nDeseja gerar uma senha[{Colors.corVerde()}S{Colors.limpar()}/{Colors.corVermelho()}N{Colors.limpar()}]? ")
 
         if quest_gerar in "S":
-            import random
-
-            letras = 'abcdefghijklmnopqrstuvwxyz' 
-            letrasM = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-            num = '1234567890'
-            simbolos = '~`!@#$%^&*()_-+={]|\:;<,>.?/'
-
-            digitos = ""
-
-            tamanho = int(input(f"Digite o tamanho da senha {Colors.corVermelho()}(min: 8){Colors.limpar()}: "))
-            conferenciaTamanho = FunctionsAS.conferirTamanho(tamanho)
-
-            ## Inclusão de letras na senha
-            incluirLetras = FunctionsAS.verificacaoSN(f"Incluir letras[{Colors.corVerde()}S{Colors.limpar()}/{Colors.corVermelho()}N{Colors.limpar()}]? ")
-            if incluirLetras in "S":
-                digitos += FunctionsAS.randomizar(letras, conferenciaTamanho)
-
-
-            ## Inclusão de letras maiúsculas na senha
-            incluirLetrasM = FunctionsAS.verificacaoSN(f"Incluir letras maiúsculas[{Colors.corVerde()}S{Colors.limpar()}/{Colors.corVermelho()}N{Colors.limpar()}]? ")
-            if incluirLetrasM in "S":
-                digitos += FunctionsAS.randomizar(letrasM, conferenciaTamanho)
-
-
-            ## Inclusão de números na senha
-            incluirNumeros = FunctionsAS.verificacaoSN(f"Incluir números[{Colors.corVerde()}S{Colors.limpar()}/{Colors.corVermelho()}N{Colors.limpar()}]? ")
-            if incluirNumeros in "S":
-                digitos += FunctionsAS.randomizar(num, conferenciaTamanho)
-
-
-            ## Inclusão de símbolos na senha
-            incluirSimbolos = FunctionsAS.verificacaoSN(f"Incluir símbolos[{Colors.corVerde()}S{Colors.limpar()}/{Colors.corVermelho()}N{Colors.limpar()}]? ")
-            if incluirSimbolos in "S":
-                digitos += FunctionsAS.randomizar(simbolos, conferenciaTamanho)
-
-            ## Embaralhar a senha
-            digitos = random.sample(digitos, conferenciaTamanho)   # Gera uma *lista* embaralhada
-
-            print("Sua senha gerada é: ", end="")
-            
-            senha = ""
-
-            Colors.corVerde()       # Define a cor verde
-            for c in digitos:
-                print(f"{Colors.corVerde()}{c}{Colors.limpar()}", end="") 
-                senha += c
-
-            print(f"{Colors.corVerde()}\n\nSeu login e senha foram alterados e armazenados com sucesso! {Colors.limpar()}")
-
-            FunctionsAS.SalvaDado(Nome_Arquivo, "\nSenha: ", senha)
+            FunctionsAS.GerarSenha(Nome_Arquivo)
 
         else:
             senha = str(input("Digite aqui sua nova senha: "))
             FunctionsAS.SalvaDado(Nome_Arquivo, "\nSenha: ", senha)
 
-            print(f"{Colors.corVerde()}Seu login e senha foram alterados e armazenados com sucesso! {Colors.limpar()}")
+        print(f"{Colors.corVerde()}\n\nSeu login e senha foram alterados e armazenados com sucesso! {Colors.limpar()}")
+

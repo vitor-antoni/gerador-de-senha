@@ -79,3 +79,53 @@ def verificacaoSN(pergunta=""):
         print(f"Erro para verificar: {error}")
     else:
         return verf
+
+def GerarSenha(nome_arquivo):
+    import random
+
+    letras = 'abcdefghijklmnopqrstuvwxyz' 
+    letrasM = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    num = '1234567890'
+    simbolos = '~`!@#$%^&*()_-+={]|\:;<,>.?/'
+
+    digitos = ""
+
+    tamanho = int(input(f"Digite o tamanho da senha {Colors.corVermelho()}(min: 8){Colors.limpar()}: "))
+    conferenciaTamanho = conferirTamanho(tamanho)
+
+    ## Inclusão de letras na senha
+    incluirLetras = verificacaoSN(f"Incluir letras[{Colors.corVerde()}S{Colors.limpar()}/{Colors.corVermelho()}N{Colors.limpar()}]? ")
+    if incluirLetras in "S":
+        digitos += randomizar(letras, conferenciaTamanho)
+
+
+    ## Inclusão de letras maiúsculas na senha
+    incluirLetrasM = verificacaoSN(f"Incluir letras maiúsculas[{Colors.corVerde()}S{Colors.limpar()}/{Colors.corVermelho()}N{Colors.limpar()}]? ")
+    if incluirLetrasM in "S":
+        digitos += randomizar(letrasM, conferenciaTamanho)
+
+
+    ## Inclusão de números na senha
+    incluirNumeros = verificacaoSN(f"Incluir números[{Colors.corVerde()}S{Colors.limpar()}/{Colors.corVermelho()}N{Colors.limpar()}]? ")
+    if incluirNumeros in "S":
+        digitos += randomizar(num, conferenciaTamanho)
+
+
+    ## Inclusão de símbolos na senha
+    incluirSimbolos = verificacaoSN(f"Incluir símbolos[{Colors.corVerde()}S{Colors.limpar()}/{Colors.corVermelho()}N{Colors.limpar()}]? ")
+    if incluirSimbolos in "S":
+        digitos += randomizar(simbolos, conferenciaTamanho)
+
+    ## Embaralhar a senha
+    digitos = random.sample(digitos, conferenciaTamanho)   # Gera uma *lista* embaralhada
+
+    print("Sua senha gerada é: ", end="")
+    
+    senha = ""
+
+    Colors.corVerde()       # Define a cor verde
+    for c in digitos:
+        print(f"{Colors.corVerde()}{c}{Colors.limpar()}", end="") 
+        senha += c
+
+    SalvaDado(nome_arquivo, "\nSenha: ", senha)
