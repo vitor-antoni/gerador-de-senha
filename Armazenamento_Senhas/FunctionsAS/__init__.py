@@ -1,10 +1,19 @@
 import Colors
 
+def inteiro(num, conversao_int=8):
+    pergunta = str(input(num))
+    while not pergunta.isnumeric():
+        pergunta = str(input(num))
+    
+    conversao_int = int(pergunta)
+    return conversao_int
+        
+    
 def TabularTitulo(titulo):
     print(Colors.corVioleta())
-    print("~" * 40)
-    print(titulo.center(40))
-    print("~" * 40)
+    print("~" * 50)
+    print(titulo.center(50))
+    print("~" * 50)
     print(Colors.limpar())
 
 def ArquivoExiste(nome_arquivo):
@@ -109,7 +118,8 @@ def GerarSenha(nome_arquivo):
 
     digitos = ""
 
-    tamanho = int(input(f"Digite o tamanho da senha {Colors.corVermelho()}(min: 8){Colors.limpar()}: "))
+    tamanho = inteiro(f"Digite o tamanho da senha {Colors.corVermelho()}(min: 8){Colors.limpar()}: ")
+
     conferenciaTamanho = conferirTamanho(tamanho)
 
     ## Inclusão de letras na senha
