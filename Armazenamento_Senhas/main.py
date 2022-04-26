@@ -1,12 +1,7 @@
 import FunctionsAS
 import Colors
 
-print(f"""\n\nO que você deseja realizar? 
-[ 1 ] Armazenar senha
-[ 2 ] Editar senha armazenada
-[ 3 ] Deletar senha armazenada
-[ 4 ] Visualizar senha armazenada
-[ 5 ] Para {Colors.corVermelho()}fechar{Colors.limpar()} o programa""")
+print(f"O que você deseja realizar?\n[ 1 ] Armazenar senha\n[ 2 ] Editar senha armazenada\n[ 3 ] Deletar senha armazenada\n[ 4 ] Visualizar senha armazenada\n[ 5 ] Para {Colors.corVermelho()}fechar{Colors.limpar()} o programa")
 
 Acao = FunctionsAS.inteiro(f"\nDigite a ação desejada[{Colors.corVerde()}1-5{Colors.limpar()}]: ")
 while Acao > 5 or Acao < 1:
@@ -76,7 +71,7 @@ while True:
 
             else:           # if FunctionsAS.ArquivoExiste == True
                 break
-       
+
         if Acao == 1:
             continue
 
@@ -185,12 +180,7 @@ while True:
     
     print("")
     print(f"{Colors.corVioleta()}~" * 50 + f"{Colors.limpar()}")
-    print(f"""O que você deseja realizar? 
-[ 1 ] Armazenar senha
-[ 2 ] Editar senha armazenada
-[ 3 ] Deletar senha armazenada
-[ 4 ] Visualizar senha armazenada
-[ 5 ] Para {Colors.corVermelho()}fechar{Colors.limpar()} o programa""")
+    print(f"O que você deseja realizar?\n[ 1 ] Armazenar senha\n[ 2 ] Editar senha armazenada\n[ 3 ] Deletar senha armazenada\n[ 4 ] Visualizar senha armazenada\n[ 5 ] Para {Colors.corVermelho()}fechar{Colors.limpar()} o programa")
 
     Acao = FunctionsAS.inteiro(f"\nDigite a ação desejada[{Colors.corVerde()}1-5{Colors.limpar()}]: ")
     while Acao > 5 or Acao < 1:
