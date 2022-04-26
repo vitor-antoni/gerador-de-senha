@@ -7,6 +7,11 @@ Data de início: 22/02/2022
 
 Edit: Realizei a atualização do código, melhorando-o e adicionando funções e módulos, conforme meus conhecimentos adquiridos recentemente. Meu próximo passo será armazenar as senhas geradas em um arquivo .txt e solicitará ao usuário, um nome significativo para identificação da senha. Por Exemplo... Senha Netflix: <senha_aparecerá_aqui>.                                               _Data: 13/04/2022_
 
+Versão 3.0
+<div align="">
+<img src="https://user-images.githubusercontent.com/92998253/165199640-b3f4216d-0783-4222-8fa0-860e81d4c989.png" width="250px"/>
+</div>
+
 Versão 2.0
 <div align="">
 <img src="https://user-images.githubusercontent.com/92998253/163285787-1f33548f-2816-4def-aa82-7b734389ab5d.png" width="250px"/>
