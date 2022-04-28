@@ -55,6 +55,7 @@ while True:
         while True:
             Nome_Arquivo = str(input("Esta senha é referente a que? ")).upper().strip()
 
+            # Validação do arquivo existir
             if not FunctionsAS.ArquivoExiste(Nome_Arquivo):
                 print(f"O arquivo referente a '{Colors.corAmarelo()}{Nome_Arquivo}{Colors.limpar()}' não existe...")
                 ArquivoExistenteEdit = FunctionsAS.inteiro("\n[ 1 ] Digitar novamente\n[ 2 ] Criar login e senha\nDigite a ação desejada: ")
@@ -65,14 +66,14 @@ while True:
                 if ArquivoExistenteEdit == 1:
                     continue
 
-                else:           # ArquivoExistenteEdit == 2
+                else:           # ArquivoExistenteEdit == 2 / Retorna a ação 1
                     Acao = 1
                     break
 
-            else:           # if FunctionsAS.ArquivoExiste == True
+            else:           # Se o arquivo existir, sairá do loop e fechará o loop
                 break
-
         if Acao == 1:
+            
             continue
 
 
