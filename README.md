@@ -5,7 +5,7 @@ Em breve atualizerei para que estas senhas sejam gravadas e identificadas a qual
 
 Data de início: 22/02/2022
 
-Edit: Realizei a atualização do código, melhorando-o e adicionando funções e módulos, conforme meus conhecimentos adquiridos recentemente. Meu próximo passo será armazenar as senhas geradas em um arquivo .txt e solicitará ao usuário, um nome significativo para identificação da senha. Por Exemplo... Senha Netflix: <senha_aparecerá_aqui>.                                               _Data: 13/04/2022_
+Edit: Meu próximo passo será desenvolver uma interface gráfica de desktop                                               _Data: 13/04/2022_
 
 Versão 3.0
 <div align="top_left">
