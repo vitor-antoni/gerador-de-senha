@@ -133,8 +133,7 @@ while True:
 
             print(f"Arquivo '{Colors.corAmarelo()}{Nome_Arquivo}{Colors.limpar()}' {Colors.corVermelho()}exclúido{Colors.limpar()} com sucesso!")
             break
-
-
+        
     elif Acao == 4:
         titulo = "Visualizar Senha"
         FunctionsAS.TabularTitulo(titulo)

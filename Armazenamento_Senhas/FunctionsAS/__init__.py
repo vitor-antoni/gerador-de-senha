@@ -97,11 +97,11 @@ def randomizar(variavel, tam=8):
 
 def verificacaoSN(pergunta=""):
     try:
-        verf = str(input(pergunta)).strip().upper()[0]
+        verf = str(input(pergunta)).upper()[0]
         
         while verf not in "SN":
             print("Digite novamente...")
-            verf = str(input(pergunta)).strip().upper()[0]
+            verf = str(input(pergunta)).upper()[0]
     except Exception as error:
         print(f"Erro para verificar: {error}")
     else:
